@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Storm247 widget that show one line weather forecast (symbol and temperature) from StormGeo.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StormGeo/storm247.oneliner.git"
+  },
+  "keywords": [
+    "storm247",
+    "widget"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

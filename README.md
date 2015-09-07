@@ -1,5 +1,7 @@
 # Storm247.oneliner
 
+![Screenshot of oneliner](images/screenshot.png)
+
 ## Install
 
 ### Bower
@@ -10,7 +12,7 @@
 
 ### Manual
 
-Copy `dist/TODO`
+Copy `dist/storm247.oneliner.min.js`
 
 ## Usage
 
