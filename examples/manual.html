@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+	<a href="simple.html">Simple</a>
+	<a href="manual.html">Manual</a>
+	<a href="styling.html">Styling</a>
+	<hr>
+	<h1>Manual bootstrap</h1>
+	<p>Be warned that this example blocks page rendering until script tag is loaded. See other async options for better performance. However this is perfect solution if you bundle widget script with your own scripts.</p>
+	<script type="text/javascript" src="../src/storm247.oneliner.js"></script>
+	<div id="widget"></div>
+	<script>
+	// This call have to happen after div and <script> tag.
+	storm247oneline({
+		element: 'widget',
+		placeId: 12345,
+		publicKey: '<publicKey>'
+	});
+	</script>
+</body>
+</html>

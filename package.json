@@ -1,0 +1,19 @@
+{
+  "name": "storm247.oneliner",
+  "version": "1.0.0",
+  "description": "Storm247 widget that show one line weather forecast (symbol and temperature) from StormGeo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Sasak <robert.sasak@gmail.com> (https://github.com/RobertSasak/)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-gzip": "^1.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^1.4.0",
+    "gulp-watch": "^4.3.5"
+  }
+}
