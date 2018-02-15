@@ -76,13 +76,15 @@
 
 	// Try to get params from script tag
 	(function () {
-		var scripts = window.document.getElementsByTagName('script');
-		if (!scripts) return;
+		var myScript = document.currentScript;
+		if (!myScript) {
+			var scripts = window.document.getElementsByTagName('script');
+			if (!scripts) return;
 
-		var index = scripts.length - 1;
-		var myScript = scripts[index];
-		if (!myScript) return;
-
+			var index = scripts.length - 1;
+			myScript = scripts[index];
+			if (!myScript) return;
+		}
 		var placeId = myScript.getAttribute('data-place-id');
 		if (!placeId) return;
 
@@ -93,7 +95,6 @@
 		}
 
 		var element = window.document.createElement('div');
-		myScript.parentNode.insertBefore(element, myScript.nextSibling);
 		myScript.parentNode.insertBefore(element, myScript.nextSibling);
 		init({
 			element: element,
