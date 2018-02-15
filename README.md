@@ -29,7 +29,7 @@ There are two basic ways to init script.
 	<div id="widget"></div>
 	<script>
 	// This call have to happen after div and <script> tag.
-	storm247oneline({
+	storm247oneliner({
 		element: 'widget',
 		placeId: 12345,
 		publicKey: '<publicKey>'
