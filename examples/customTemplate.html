@@ -18,17 +18,23 @@
 	<div id="widget"></div>
 	<div id="template" style="display: none	">
 		<div class="storm247oneliner">
-			<h1>Today</h1>
+			<h1>{dayOfWeek(0)}</h1>
 			<svg width="16" height="16" class="storm247oneliner-symbol" viewBox="0 0 25 25">
 				<use xlink:href="#symbol-{Days[0].Day.Symbol}" /></svg>
 			<span class="storm247oneliner-temp">
 				<span class="storm247oneliner-min">{Days[0].Day.TemperatureMin.round}</span>/<span class="storm247oneliner-max">{Days[0].Day.TemperatureMax.round}°</span>
 			</span>
-			<h1>Tomorrow</h1>
+			<h1>{dayOfWeek(1)}</h1>
 			<svg width="16" height="16" class="storm247oneliner-symbol" viewBox="0 0 25 25">
 				<use xlink:href="#symbol-{Days[1].Day.Symbol}" /></svg>
 			<span class="storm247oneliner-temp">
-				<span class="storm247oneliner-min">{Days[1].Day.TemperatureMin.round}</span>/<span class="storm247oneliner-max">{Days[0].Day.TemperatureMax.round}°</span>
+				<span class="storm247oneliner-min">{Days[1].Day.TemperatureMin.round}</span>/<span class="storm247oneliner-max">{Days[1].Day.TemperatureMax.round}°</span>
+			</span>
+			<h1>{dayOfWeek(2)}</h1>
+			<svg width="16" height="16" class="storm247oneliner-symbol" viewBox="0 0 25 25">
+				<use xlink:href="#symbol-{Days[2].Day.Symbol}" /></svg>
+			<span class="storm247oneliner-temp">
+				<span class="storm247oneliner-min">{Days[2].Day.TemperatureMin.round}</span>/<span class="storm247oneliner-max">{Days[2].Day.TemperatureMax.round}°</span>
 			</span>
 		</div>
 	</div>
