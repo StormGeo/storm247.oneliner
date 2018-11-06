@@ -1,6 +1,6 @@
 {
   "name": "storm247.oneliner",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Storm247 widget that show one line weather forecast (symbol and temperature) from StormGeo.",
   "main": "index.js",
   "repository": {

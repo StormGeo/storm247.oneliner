@@ -1,0 +1,46 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<a href="simple.html">Simple</a>
+	<a href="manual.html">Manual</a>
+	<a href="styling.html">Styling</a>
+	<a href="multiple.html">Multiple</a>
+	<a href="customTemplate.html">Custom template</a>
+	<hr>
+	<h1>Custom template</h1>
+	<p>Be warned that this example blocks page rendering until script tag is loaded. See other async options for better
+		performance. However this is perfect solution if you bundle widget script with your own scripts.</p>
+	<script type="text/javascript" src="../src/storm247.oneliner.js"></script>
+	<div id="widget"></div>
+	<div id="template" style="display: none	">
+		<div class="storm247oneliner">
+			<h1>Today</h1>
+			<svg width="16" height="16" class="storm247oneliner-symbol" viewBox="0 0 25 25">
+				<use xlink:href="#symbol-{Days[0].Day.Symbol}" /></svg>
+			<span class="storm247oneliner-temp">
+				<span class="storm247oneliner-min">{Days[0].Day.TemperatureMin.round}</span>/<span class="storm247oneliner-max">{Days[0].Day.TemperatureMax.round}°</span>
+			</span>
+			<h1>Tomorrow</h1>
+			<svg width="16" height="16" class="storm247oneliner-symbol" viewBox="0 0 25 25">
+				<use xlink:href="#symbol-{Days[1].Day.Symbol}" /></svg>
+			<span class="storm247oneliner-temp">
+				<span class="storm247oneliner-min">{Days[1].Day.TemperatureMin.round}</span>/<span class="storm247oneliner-max">{Days[0].Day.TemperatureMax.round}°</span>
+			</span>
+		</div>
+	</div>
+	<script>
+		// This call have to happen after div and <script> tag.
+		storm247oneliner({
+			element: 'widget',
+			placeId: 12345,
+			publicKey: '<publicKey>',
+			htmlTemplate: document.getElementById('template').innerHTML,
+		});
+	</script>
+</body>
+
+</html>
