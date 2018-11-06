@@ -50,7 +50,7 @@ Can be either string or reference to node. String is the id of the element witho
 
 ## Development
 
-Run local server with `python -m SimpleHTTPServer`. 
+Run local server with `python -m SimpleHTTPServer` or `python3 -m http.server`. 
 
 ### Build 
 
