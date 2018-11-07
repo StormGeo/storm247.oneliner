@@ -1,0 +1,84 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<a href="simple.html">Simple</a>
+	<a href="manual.html">Manual</a>
+	<a href="styling.html">Styling</a>
+	<a href="multiple.html">Multiple</a>
+	<a href="multipleDays.html">Multiple Days</a>
+	<a href="customTemplate.html">Custom template</a>
+	<hr>
+	<h1>Custom template</h1>
+	<p>Be warned that this example blocks page rendering until script tag is loaded. See other async options for better
+		performance. However this is perfect solution if you bundle widget script with your own scripts.</p>
+	<script type="text/javascript" src="../src/storm247.oneliner.js"></script>
+	<div id="widget"></div>
+	<div id="template" style="display: none	">
+		<table style="width: 100%">
+			<tr style="text-align: center">
+				<td style="font-size: 2em; width: 33%">{dayOfWeek(0)}</td>
+				<td style="width: 33%">
+					<svg width="128" height="128" class="storm247oneliner-symbol" viewBox="0 0 25 25">
+						<use xlink:href="#symbol-{Days[0].Day.Symbol}" /></svg>
+				</td>
+				<td style="width: 33%; font-size: 2em;">
+					<span class="{Days[0].Day.TemperatureMin.class}">
+						{Days[0].Day.TemperatureMin.round}°
+					</span>
+					/
+					<span class="{Days[0].Day.TemperatureMax.class}">
+						{Days[0].Day.TemperatureMax.round}°
+					</span>
+				</td>
+			</tr>
+			<tr style="text-align: center">
+				<td style="font-size: 2em; width: 33%">{dayOfWeek(1)}</td>
+				<td style="width: 33%">
+					<svg width="128" height="128" class="storm247oneliner-symbol" viewBox="0 0 25 25">
+						<use xlink:href="#symbol-{Days[1].Day.Symbol}" /></svg>
+				</td>
+				<td style="width: 33%; font-size: 2em;">
+					<span class="{Days[1].Day.TemperatureMin.class}">
+						{Days[1].Day.TemperatureMin.round}°
+					</span>
+					/
+					<span class="{Days[1].Day.TemperatureMax.class}">
+						{Days[1].Day.TemperatureMax.round}°
+					</span>
+				</td>
+			</tr>
+			<tr style="text-align: center">
+				<td style="font-size: 2em; width: 33%">{dayOfWeek(2)}</td>
+				<td style="width: 33%">
+					<svg width="128" height="128" class="storm247oneliner-symbol" viewBox="0 0 25 25">
+						<use xlink:href="#symbol-{Days[2].Day.Symbol}" /></svg>
+				</td>
+				<td style="width: 33%; font-size: 2em;">
+					<span class="{Days[2].Day.TemperatureMin.class}">
+						{Days[2].Day.TemperatureMin.round}°
+					</span>
+					/
+					<span class="{Days[2].Day.TemperatureMax.class}">
+						{Days[2].Day.TemperatureMax.round}°
+					</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script>
+		// This call have to happen after div and <script> tag.
+		storm247oneliner({
+			element: 'widget',
+			placeId: 12345,
+			publicKey: '<publicKey>',
+			htmlTemplate: document.getElementById('template').innerHTML,
+			dayNames: ['Søndag', 'Mondag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'],
+		});
+	</script>
+</body>
+
+</html>
